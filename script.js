@@ -1,28 +1,23 @@
-function showLove() {
-  document.getElementById('secret').classList.remove('hidden');
+function showLetter() {
+  document.getElementById('letter').classList.remove('hidden');
 }
 
-document.getElementById('messageForm').onsubmit = function(e) {
-  e.preventDefault();
-  alert('Pesanmu sudah terkirim ke hatiku 💘');
-};
-
-// Animasi bintang jatuh
+// Bintang jatuh
 const canvas = document.getElementById('stars');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let stars = Array(100).fill().map(() => ({
+let stars = Array(150).fill().map(() => ({
   x: Math.random() * canvas.width,
   y: Math.random() * canvas.height,
-  r: Math.random() * 1.5,
+  r: Math.random() * 1.2 + 0.3,
   d: Math.random() * 5
 }));
 
 function drawStars() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = '#fff';
+  ctx.fillStyle = 'white';
   stars.forEach(star => {
     ctx.beginPath();
     ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
