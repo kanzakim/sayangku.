@@ -1,0 +1,2 @@
+# sayangku.
+Aku Sayang Ayang
